@@ -5,3 +5,6 @@
  */
 
 export { default as Home } from "./home";
+export { default as Navbar } from "./navbar";
+export { default as Lights } from "./lights";
+export { default as SingleLight } from "./singleLight";

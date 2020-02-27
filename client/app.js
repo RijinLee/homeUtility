@@ -1,11 +1,11 @@
 import React from "react";
 import Routes from "./routes";
+import { Navbar } from "./components";
 
 const App = () => {
   return (
     <React.Fragment>
-      <h1>HELLOWORLD!!!!!!! this is app.js</h1>
-
+      <Navbar />
       <Routes />
     </React.Fragment>
   );

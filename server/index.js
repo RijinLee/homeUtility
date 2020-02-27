@@ -6,7 +6,7 @@ const compression = require("compression");
 const app = express();
 const PORT = process.env.PORT || 3000;
 module.exports = app;
-
+// require("https").globalAgent.options.ca = require("ssl-root-cas/latest").create();
 /**
  * In your development environment, you can keep all of your
  * app's secret API keys in a file called `secrets.js`, in your project
@@ -30,6 +30,7 @@ app.use(compression());
 // AUTH & API ROUTES
 // app.use("/auth", require("./auth"));
 // app.use("/api", require("./api"));
+app.use("/hue", require("./hue"));
 
 // STATIC FILE SERVING MIDDLEWARE
 app.use(express.static(path.join(__dirname, "..", "public")));

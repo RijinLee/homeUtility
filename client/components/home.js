@@ -10,8 +10,7 @@ const Home = () => {
             <div id="hero-text">
               <h1>THIS IS MY HOME COMPONENT</h1>
               <p>
-                lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-                ipsum
+                <Link to="/lights">Go to Hue Lights</Link>
               </p>
               <p>
                 lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
