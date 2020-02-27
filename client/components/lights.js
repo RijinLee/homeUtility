@@ -19,7 +19,7 @@ class Lights extends React.Component {
 
         {Object.values(this.state.lights).map((light, index) => (
           <div key={index}>
-            <SingleLight name={light} />
+            <SingleLight light={light} index={index} />
           </div>
         ))}
       </div>
