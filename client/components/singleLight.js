@@ -11,9 +11,6 @@ class SingleLight extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  // somethings wrong with this function ....need to figure out why its not working!!!!!
-  // somethings wrong with this function ....need to figure out why its not working!!!!!
-  // somethings wrong with this function ....need to figure out why its not working!!!!!
   async handleChange() {
     await axios.put(`/hue/lights/${this.props.index + 1}/state`, {
       on: !this.state.on
@@ -22,8 +19,8 @@ class SingleLight extends React.Component {
   }
 
   render() {
+    // console.log("this is props: ", this.props);
     const { light } = this.props;
-    console.log("this is props: ", this.props);
     return (
       <div>
         <h2>{light.name}</h2>

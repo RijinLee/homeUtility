@@ -16,7 +16,7 @@ router.get("/lights", async (req, res, next) => {
   const rp = require("request-promise");
   rp(options)
     .then(result => {
-      console.log(result);
+      // console.log(result);
       res.json(result);
     })
     .catch(err => {
@@ -37,7 +37,32 @@ router.put(`/lights/:lightId/state`, (req, res, next) => {
   const rp = require("request-promise");
   rp(options)
     .then(result => {
-      console.log(result);
+      // console.log(result);
+      res.json(result);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+//fix this router
+//fix this router
+//fix this router ]
+
+router.get("/groups", async (req, res, next) => {
+  const url = `https://${hueBridge}/api/${hueUser}/groups`;
+  // console.log(url);
+  const options = {
+    method: "GET",
+    url: url,
+    json: true,
+    rejectUnauthorized: false
+  };
+  const rp = require("request-promise");
+  rp(options)
+    .then(result => {
+      // console.log(result);
       res.json(result);
     })
     .catch(err => {
