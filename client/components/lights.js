@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import SingleLight from "./singleLight";
+import SingleGroup from "./singleGroup";
 
 class Lights extends React.Component {
   constructor() {
@@ -24,7 +25,7 @@ class Lights extends React.Component {
           <h1>HUE GROUPS</h1>
           {Object.values(this.state.groups).map((group, index) => (
             <div key={index}>
-              <SingleLight light={group} index={index} />
+              <SingleGroup group={group} index={index} />
             </div>
           ))}
         </div>
